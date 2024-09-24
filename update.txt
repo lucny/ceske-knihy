@@ -1,0 +1,7 @@
+UPDATE `knihy` 
+JOIN zanry ON knihy.zanr = zanry.oznaceni_zanru 
+SET knihy.id_zanru = zanry.id_zanru
+
+UPDATE `knihy` 
+JOIN autori ON CONCAT(knihy.jmeno_autora, knihy.prijmeni_autora) = CONCAT(autori.jmeno, autori.prijmeni)
+SET knihy.id_autora = autori.id_autora
